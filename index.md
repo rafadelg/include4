@@ -11,8 +11,8 @@ Respecto del MD5, creado en el 91 por [Ronald Rivest](https://amturing.acm.org/a
 
 Otras lecturas/recursos, recomendados:
 
-[(https://news.sophos.com/es-es/2017/01/27/algoritmo-md5-las-horas-contadas/)]
+[https://news.sophos.com/es-es/2017/01/27/algoritmo-md5-las-horas-contadas/]
 
-[(http://www.criptored.upm.es/descarga/Class4cryptc4c7.2_Funcion_hash_MD5.pdf)]
+[http://www.criptored.upm.es/descarga/Class4cryptc4c7.2_Funcion_hash_MD5.pdf]
 
-[(https://www.youtube.com/watch?v=dxqxxwi9pwk)]
+[https://www.youtube.com/watch?v=dxqxxwi9pwk]
