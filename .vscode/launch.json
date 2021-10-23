@@ -5,17 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch ex01",
+            "name": "Launch Chrome",
             "request": "launch",
-            "type": "chrome",
-            "url": "http://localhost:8080/ex01_md5.html",
+            "type": "pwa-chrome",
+            "url": "http://localhost:8080",
             "webRoot": "${workspaceFolder}"
         },
         {
-            "name": "Launch Chrome against localhost",
-            "type": "chrome",
+            "name": "Launch Ex01",
             "request": "launch",
-            "url": "http://localhost:8080",
+            "type": "pwa-chrome",
+            "url": "http://localhost:8080/ex01_md5/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
