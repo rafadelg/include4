@@ -1,7 +1,7 @@
 # #Include4
 ## Ejercicio 1 plataforma
 
-## Calcular: [**MD5 Hash**](https://rafadelg.github.io/include4/ex01_md5/)<span style="color:white">{:target="_blank" rel="noopener noreferrer"}</style>
+## Calcular: [**MD5 Hash**](https://rafadelg.github.io/include4/ex01_md5/)<span style="color:white">{:target="_blank" rel="noopener noreferrer"}</span>
 
 Los Algoritmos de "disgestión" (*Message Digest, hash* o *fingerprint*), conocidos como **MDx** y **SHA's**, reducen el msg original a una secuencia de bits q lo identifican, a la q llamamos "huella digital" o "compendio" del msg. Contribuyen a garantizar la integridad, una de las dimensiones de la seguridad, porque permiten detectar si el contenido de un msg se altera y, también, forman parte de los procesos de firma electrónica.
 
