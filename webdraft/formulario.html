@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>My first web</title>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+</head>
+   
+<body onload="hora()">
+    <div id="contenedor">
+        <header id="cabecera">
+			<img src="img/prototipo.jpg" align="left" width="105" height="105" alt="imagenPrototipo"/>
+			<a href="http://www.uhu.es" title="gracias a la UHU se ha podido desarrollar esta página" target=_blank>
+				<img src="img/logo.jpg" align="right" width="105" height="105" alt="logo"/> </a>
+			<h1>"er cajón desastre"</h1>
+            <h2 id="subrayado">venta de artículos de segunda mano</h2>
+			<script>
+				var f = new Date();
+				var diaSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+				document.write("hoy es " + diaSemana[f.getDay()] +", " + f.getDate() + "/" + (f.getMonth()+1) + "/" + f.getFullYear() + " ");
+			</script>
+			<span id="hora">000000</span>
+        </header>
+		
+        <nav id="menuNavegacion">
+            <h3>Menú</h3>
+			<br>
+            <ul> 
+                <li> <a href="index.html" 	   title="ir a la página de inicio">    Página de inicio   </a></li>
+                <li> <a href="datos.html" 	   title="ir a la sección de productos">Aquí sus productos </a></li>
+                <li> <a href="formulario.html" title="ir a la página de pedidos">   Realice su pedido  </a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <form id="cuerpoPpal" name="formulario" method="post" action="" onsubmit="return comprobarClave()">
+			<h3>Datos para realizar el pedido</h3>
+            <table border="4" class="impar">
+				<tr>
+					<td>Nombre:</td>
+					<td> <input type="text" name="nombre" size="27" id="fieldCompul" required="required"/></td>
+				</tr>
+				<tr>
+					<td>Correo electrónico:</td>
+					<td> <input type="email" name="correo" size="27" id="fieldCompul" required="required" placeholder="name@dominio" /> </td>
+				</tr>
+				<tr>
+					<td>Clave (6 dígitos: 5 letras + 1 Nº):</td>
+					<td><input type="password" name="clave1" size="27" id="fieldCompul" pattern="[A-Za-z]{5}[0-9]{1}" title="Debe poseer 5 letras y 1 número" required="required" onfocus="restaurar()"/></td>
+                </tr>
+				<tr>
+					<td>Repetir Clave:</td>
+					<td><input type="password" name="clave2" size="27" id="fieldCompul" required="required" onfocus="restaurar()"/></td>
+				</tr>
+				<tr>
+					<td>Dirección:</td>
+					<td><textarea name="direccion" id="fieldNormal" maxlength="90"> </textarea></td>
+				</tr>
+				<tr>
+					<td>Código postal:</td>
+					<td><input type="number" id="fieldNormal" pattern="[d]{5,.}{99.999}" name="cod" title="Introduzca su código postal" placeholder="99.999" /></td>
+				</tr>
+                <tr>
+					<td>Provincia:</d>
+					<td><select name="provincia" id="fieldNormal" onchange="cambiaProvincia()"> //textfiel
+						<option value='00' selected>Seleccione..</option>
+						<option value='01'>Álava</option>			<option value='02'>Albacete</option>		<option value='03'>Alicante</option>
+						<option value='04'>Almería</option>			<option value='05'>Ávila</option>			<option value='06'>Badajoz</option>
+						<option value='07'>Illes Balears</option>	<option value='08'>Barcelona</option>		<option value='09'>Burgos</option>
+						<option value='10'>Cáceres</option>			<option value='11'>Cádiz</option>			<option value='12'>Castellón/Castelló</option>
+						<option value='13'>Ciudad Real</option>		<option value='14'>Córdoba</option>			<option value='15'>Coruña</option>
+						<option value='16'>Cuenca</option>			<option value='17'>Girona</option>			<option value='18'>Granada</option>
+						<option value='19'>Guadalajara</option>		<option value='20'>Guipúzcoa</option>		<option value='21'>Huelva</option>
+						<option value='22'>Huesca</option>			<option value='23'>Jaén</option>			<option value='24'>León</option>	
+						<option value='25'>Lleida</option>			<option value='26'>La Rioja</option>		<option value='27'>Lugo</option>
+						<option value='28'>Madrid</option>			<option value='29'>Málaga</option>			<option value='30'>Murcia</option>
+						<option value='31'>Navarra</option>			<option value='32'>Ourense</option>			<option value='33'>Asturias</option>
+						<option value='34'>Palencia</option>		<option value='35'>Las Palmas</option>		<option value='36'>Pontevedra</option>
+						<option value='37'>Salamanca</option>		<option value='38'>Santa Cruz de Tenerife</option>
+						<option value='39'>Cantabria</option>		<option value='40'>Segovia</option>			<option value='41'>Sevilla</option>
+						<option value='42'>Soria</option>			<option value='43'>Tarragona</option>		<option value='44'>Teruel</option>
+						<option value='45'>Toledo</option>			<option value='46'>Valencia</option>		<option value='47'>Valladolid</option>
+						<option value='48'>Bizkaia</option>			<option value='49'>Zamora</option>			<option value='50'>Zaragoza</option>
+						<option value='51'>Ceuta</option>			<option value='52'>Melilla</option>			<option value='53'>Andorra</option>
+						</selected>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="user-url">Su página web o blog: </label></td>
+					<td><input type="url" name="user-url" size="27" id="fieldNormal" placeholder="http://www.example.com/" /> </td>
+				<tr>
+					<td>Teléfono de contacto:</td>
+					<td><input type="tel" size="27" id="fieldNormal" pattern="\d\d\d\.\d\d\d\.\d\d\d"  title="telefono" placeholder="6__.___.___" /></td>
+                </tr>
+                <tr>
+					<td>Nos gustaría conocer sus intereses:</td>
+					<td>
+						<dl>
+							<dt><input type="checkbox" name="interes" value="Electronica"/> Electronica</dt>
+							<dt><input type="checkbox" name="interes" value="Libros" 	 /> Libros</dt>
+							<dt><input type="checkbox" name="interes" value="Música"	 /> Música</dt>
+							<dt><input type="checkbox" name="interes" value="Videojuegos"/> Videojuegos</dt>
+						</dl>
+					</td>
+				</tr>
+				<tr>
+					<td>Por favor, indíquenos como nos ha conocido:</td>
+					<td>
+						<dl>
+							<dt><input type="radio" name="source" value="Buscador"/>Buscador</dt>
+							<dt><input type="radio" name="source" value="Amigo" />	Amigo</dt>
+							<dt><input type="radio" name="source" value="Radio"/>	Radio</dt>
+							<dt><input type="radio" name="source" value="TV"/>		TV</dt>
+							<dt><input type="radio" name="source" value="Prensa"/>	Prensa</dt>
+							<dt><input type="radio" name="source" value="Otros" checked/>Otros</dt>
+						</dl>
+					</td>
+				</tr>
+			</table>
+			<center>
+				<input type="submit" value="Enviar"/>
+				<input type="reset"  value="Borrar"/>
+			</center>
+        </form>
+		<p id="aviso"></p>
+		<footer id="pie">
+   			<p>Ejercício práctico I: Fusionando HTML, CSS y JavaScript (Tecnologías de la Web, JLAM)
+			<p>Máster en Tecnologías Informáticas Avanzadas UHU 2013/2104</p>
+        </footer>
+    </div>
+<script type="text/javascript" src="js/fFecha.js"> </script>
+<script type="text/javascript" src="js/fClave.js"></script>
+<script type="text/javascript" src="js/fProvincias.js"></script>
+</body>
+</html>
