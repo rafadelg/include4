@@ -15,7 +15,7 @@
             "name": "Launch Ex01",
             "request": "launch",
             "type": "pwa-chrome",
-            "url": "http://localhost:8080/ex01_md5.html",
+            "url": "http://localhost:8080/ex01_md5/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
