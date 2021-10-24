@@ -1,11 +1,13 @@
-const text = 'ThisIsAMoreSecureHashFunction';
+//const message = formulario.msg.value;
+const text = formulario.msg.value;
 
 async function digestMessage(message) {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(message);
-  const hash = await crypto.subtle.digest('SHA-256', data);
-  return hash;
+  const msgUint8 = new TextEncoder().encode(message);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  return hashHex;
 }
-
-const digestBuffer = await digestMessage(text);
-console.log(digestBuffer.byteLength);
+const digestHex = await digestMessage(text);
+//console.log(digestHex);
+alert("El Hash SHA256 es: " + digestHex)
