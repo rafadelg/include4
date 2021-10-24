@@ -1,13 +1,27 @@
-//const message = formulario.msg.value;
-const text = formulario.msg.value;
+/* nodejs
+        var forge = require("node-forge");
+        var md = forge.md.sha256.create();
+        md.update(formulario.msg.value);
+        alert("El Hash SHA-256 es: " + md.digest().toHex());
+    */
 
-async function digestMessage(message) {
-  const msgUint8 = new TextEncoder().encode(message);
-  const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-  return hashHex;
+function sha256Conv(formulario){
+    if (formulario.msg.value == null || formulario.msg.value == ""){
+        alert("Has de introducir una cadena, por favor.");
+    }       
+    else{
+        var var_sha256 = sha256(formulario.msg.value)
+        alert("El Hash SHA-256 es: " + var_sha256);
+        alert("Y el md5 de " + var_sha256 + " \n\nes: " + md5(var_sha256));
+    }
 }
-const digestHex = await digestMessage(text);
-//console.log(digestHex);
-alert("El Hash SHA256 es: " + digestHex)
+
+/* Observaciones:
+VT: https://cdn.jsdelivr.net/gh/emn178/js-sha256/build/sha256.min.js
+    Bfore.Ai PreCrime, Malicious
+    CRDF, malicius
+
+Malicious
+    https://bfore.ai/
+    https://www.crdf.fr/
+*/

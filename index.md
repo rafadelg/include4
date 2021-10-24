@@ -1,7 +1,9 @@
 # #Include4
-## Ejercicio 1 plataforma
+## Ejercicios 1 y 2 plataforma
 
 ## Calcular: [**MD5 Hash**](https://rafadelg.github.io/include4/ex01_md5/)
+
+## Calcular: [**SHA256 y posterior MD5 Hash**](https://rafadelg.github.io/include4/ex02_md5/)
 
 Los Algoritmos de "disgestión" (*Message Digest, hash* o *fingerprint*), conocidos como **MDx** y **SHA's**, reducen el msg original a una secuencia de bits q lo identifican, a la q llamamos "huella digital" o "compendio" del msg. Contribuyen a garantizar la integridad, una de las dimensiones de la seguridad, porque permiten detectar si el contenido de un msg se altera y, también, forman parte de los procesos de firma electrónica.
 
@@ -14,3 +16,9 @@ Otras lecturas o recursos recomendados:
 *<http://www.criptored.upm.es/descarga/Class4cryptc4c7.2_Funcion_hash_MD5.pdf>*
 
 *<https://news.sophos.com/es-es/2017/01/27/algoritmo-md5-las-horas-contadas/>*
+
+Y para el SHA-2 (Secure Hash Algorithm 2):
+
+*<https://csrc.nist.gov/glossary/term/sha_256>*
+
+*<https://www.rfc-editor.org/info/rfc6234>*
