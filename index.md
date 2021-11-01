@@ -5,7 +5,7 @@
 
 ## Calcular: [**SHA256 Hash** *y su posterior MD5*](https://rafadelg.github.io/include4/ex02_sha256/)
 
-## Calcular: [**XOR**](https://rafadelg.github.io/include4/ex03_xor/)
+## Calcular: [**XOR**](https://rafadelg.github.io/include4/ex03_XOR/)
 
 Los Algoritmos de "disgestión" (*Message Digest, hash* o *fingerprint*), conocidos como **MDx** y **SHA's**, reducen el msg original a una secuencia de bits q lo identifican, a la q llamamos "huella digital" o "compendio" del msg. Contribuyen a garantizar la integridad, una de las dimensiones de la seguridad, porque permiten detectar si el contenido de un msg se altera y, también, forman parte de los procesos de firma electrónica.
 
