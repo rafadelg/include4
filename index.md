@@ -22,3 +22,5 @@ Y para el SHA-2 (Secure Hash Algorithm 2):
 *<https://csrc.nist.gov/glossary/term/sha_256>*
 
 *<https://www.rfc-editor.org/info/rfc6234>*
+
+## Calcular: [**XOR**](https://rafadelg.github.io/include4/ex03_xor/)
