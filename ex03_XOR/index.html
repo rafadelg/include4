@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-	<title>Encriptado/Desencriptador Xor en Javascript</title>
+    <title>Encriptado/Desencriptador Xor en Javascript</title>
     <script type="text/javascript" src="js/ex03.js"></script>
 </head>
+
 <body>
-<form name="frmXor">
-<table>
-    <tr>
-        <td><b>Original: </b><br/><textarea name="txtOriginal" cols="80" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet mauris ac justo cursus hendrerit mattis viverra dolor. Cras.</textarea></td>
-    </tr>
-    <tr>
-        <td><b>Key: </b><br/><textarea name="txtKey" cols="80" rows="4">www.javiergutierrezchamorro.com</textarea></td>
-    </tr>
-    <tr>
-        <td><input type="button" name="butEncrypt" value="Encrypt/Decrypt Original with Key onto Result" onclick="javascript:document.frmXor.txtResult.value = EncryptDecrypt(document.frmXor.txtOriginal.value, document.frmXor.txtKey.value);" /></td>
-    </tr>
-    <tr>
-        <td><b>Result: </b><br/><textarea name="txtResult" cols="80" rows="4"></textarea></td>
-    </tr>
-</table>
-</form>
-<br />
-<br />
-<small>
-    <p>[1] J .Gutierrez, “Encriptador Xor en Javascript” [on line], <i>Bitácora de Javier Gutiérrez Chamorro (Guti)</i>, 2012.<br />
-        Disponible en: <a href="https://www.javiergutierrezchamorro.com/encriptador-xor-en-javascript/">
-        hhttps://www.javiergutierrezchamorro.com/encriptador-xor-en-javascript/<a> [Accedido el: 01-nov-2021]
-    </p>
-</small> 
+    <form name="frmXor">
+        <table>
+            <tr>
+                <td><b>Mensaje: </b><br /><textarea name="txtOriginal" cols="80" rows="4">HQERKhYCLDc9KgQX</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Clave: </b><br /><textarea name="txtKey" cols="80" rows="4">encryptXORkey</textarea></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="butEncrypt" value="Encrypt/Decrypt Original with Key onto Result"
+                        onclick="javascript:document.frmXor.txtResult.value = EncryptDecrypt(document.frmXor.txtOriginal.value, document.frmXor.txtKey.value);" />
+                </td>
+            </tr>
+            <tr>
+                <td><b>Resultado: </b><br /><textarea name="txtResult" cols="80" rows="4"></textarea></td>
+            </tr>
+        </table>
+    </form>
+    <br />
+    <small>
+        <p><b>Fuente: </b>J .Gutierrez, “Encriptador Xor en Javascript” [on line], <i>Bitácora de Javier Gutiérrez Chamorro
+                (Guti)</i>, 2012.<br />
+            Disponible en: <a href="https://www.javiergutierrezchamorro.com/encriptador-xor-en-javascript/">
+                hhttps://www.javiergutierrezchamorro.com/encriptador-xor-en-javascript/<a> [Accedido el: 01-nov-2021]
+        </p>
+    </small>
 </body>
+
 </html>
